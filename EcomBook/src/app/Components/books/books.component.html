@@ -1,1 +1,24 @@
-<p>books works!</p>
+<!-- <div *ngfor="let book of apiData" class="card" style="width: 18rem;">
+    <img [src]="book.coverFileName" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{book.title}}</h5>
+        <p class="card-text">{{book.price}}</p>
+        <a href="#" class="btn btn-primary">Add To Cart</a>
+    </div>
+</div> -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <div *ngFor="let books of apiData" class="card">
+
+                <div class="card-body">
+                    <img [src]="books.coverFileName" class="card-img-top" alt="book image">
+                    <h4 class="card-title">{{books.title}}</h4>
+                    <h6 class="card-text">₹{{books.price}}</h6>
+                </div>
+
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
