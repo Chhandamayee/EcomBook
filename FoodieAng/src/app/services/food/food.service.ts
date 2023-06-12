@@ -8,6 +8,12 @@ import { Tag } from 'src/app/Shared/Models/tag';
 export class FoodService {
 
   constructor() { }
+
+  getfoodById(id: number) {
+    this.getAll().find(food => food.id == id); 
+
+  }
+
   getAllFoodByTag(tag: string): Foods[] {
     return tag == 'All' ?
       this.getAll() : this.getAll().filter(food => food.tags?.includes(tag));
@@ -24,7 +30,7 @@ export class FoodService {
   getAlltag(): Tag[] {
     return [
       //count: 7
-      { name: "All"},
+      { name: "All" },
       { name: "Fastfood" },
       { name: "Lunch" },
       { name: "Dinner" },
