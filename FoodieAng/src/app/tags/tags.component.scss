@@ -1,0 +1,13 @@
+div{
+    display: flex;
+    justify-content: center;
+}
+div a{
+    padding: 1.5rem;
+    color: brown;
+}
+div a:hover{
+    color: red;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px coral;
+}
