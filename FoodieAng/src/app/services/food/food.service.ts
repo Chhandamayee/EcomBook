@@ -10,7 +10,7 @@ export class FoodService {
   constructor() { }
 
   getfoodById(id: number) {
-    this.getAll().find(food => food.id == id); 
+    return this.getAll().find(food => food.id == id);
 
   }
 
